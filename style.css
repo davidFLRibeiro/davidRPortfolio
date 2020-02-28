@@ -79,7 +79,7 @@ label {
 
 .text {
   padding-top: 35px;
-  max-width: 850px;
+  width: 60%;
   text-align: center;
   margin: 0 auto;
 }
@@ -89,10 +89,16 @@ label {
 }
 
 .imghome {
-  max-height: 300px;
-  max-width: 500px;
-  min-height: 250px;
-  min-width: 300px;
+  width: 60%;
+  height: 40%;
+  padding-bottom: 25px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quizimg {
+  width: 80%;
+  height: 60%;
   padding-bottom: 25px;
   margin: 0 auto;
   text-align: center;
@@ -105,12 +111,13 @@ label {
 }
 
 .projNBA {
-  max-width: 600px;
+  width: 60%;
   text-align: center;
   margin: 0 auto;
 }
 .projNBA h1 {
-  float: left;
+  width: 50%;
+  margin: auto;
   font-weight: bold;
   font-family: 'Courier New';
 }
@@ -130,9 +137,10 @@ label {
 
 .links {
   height: 40px;
-  width: 100%;
+  width: 50%;
   display: inline-flex;
-  padding-left: 60%;
+  text-align: right;
+  padding-bottom: 10%;
 }
 
 .link {
@@ -149,12 +157,10 @@ label {
   height: 15px;
   width: 15px;
 }
-
+/* changing*/
 .nbaQuiz {
-  max-height: 550px;
-  max-width: 600px;
-  min-height: 200px;
-  min-width: 250px;
+  height: 30%;
+  width: 40%;
   margin: 0 auto;
   text-align: center;
 }
@@ -264,8 +270,11 @@ label {
   }
 
   .imghome {
-    display: block;
-    padding: 15px;
+    width: 60%;
+    height: 40%;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .home {
@@ -392,15 +401,26 @@ label {
 
   .menu a {
     padding-top: 1px;
-    width: 100%;
+    min-width: 100%;
     display: inline-block;
     text-align: center;
     height: 35px;
   }
 
   .imghome {
-    display: block;
-    padding: 15px;
+    min-width: 60%;
+    min-height: 40%;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .quizimg {
+    min-width: 70%;
+    min-height: 50%;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .text h1 {
@@ -541,10 +561,27 @@ label {
     text-align: center;
     height: 35px;
   }
-
+  /*changing*/
   .imghome {
+    min-width: 65%;
+    min-height: auto;
     display: block;
-    padding: 15px;
+    padding: 5px;
+  }
+
+  .quizimg {
+    min-width: 85%;
+    min-height: auto;
+    display: block;
+    padding: 5px;
+  }
+
+  .links {
+    height: 40px;
+    width: 50%;
+    display: inline-flex;
+    text-align: right;
+    padding-bottom: 10%;
   }
 
   .text h1 {
@@ -578,9 +615,18 @@ label {
     padding-left: 15px;
   }
 
+  .links {
+    height: 40px;
+    width: 60%;
+    display: inline-flex;
+    text-align: right;
+    padding-bottom: 20%;
+  }
+
   .nbaQuiz {
-    display: block;
-    padding: 15px;
+    width: 60%;
+    height: auto;
+    margin: auto;
   }
 
   #toggle:checked + .menu {
@@ -595,9 +641,9 @@ label {
   .footer {
     text-decoration: none;
     position: relative;
-    left: 0;
+    margin-right: 100px;
     bottom: 0;
-    min-width: 100%;
+    width: 100%;
     background-color: black;
     color: white;
     text-align: right;
