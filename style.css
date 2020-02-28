@@ -1,0 +1,638 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #eaeaeb;
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+  font-family: 'Courier New';
+  font-weight: 10;
+  font-style: normal;
+  background-color: black;
+}
+
+.menu {
+  margin: 0 30px 0 0;
+}
+
+.menu a {
+  clear: right;
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 0 10px;
+  line-height: 50px;
+}
+
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+
+#toggle {
+  display: none;
+}
+
+.home {
+  min-height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.home h1 {
+  font-family: 'Courier New';
+  font-weight: 10;
+  font-style: normal;
+  font-size: 38px;
+  padding-bottom: 25px;
+  padding-top: 15px;
+  margin: auto;
+}
+.home h2 {
+  font-family: 'Courier New';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.projects {
+  padding-top: 200px;
+  min-height: 100%;
+  width: 100%;
+}
+
+.text {
+  padding-top: 35px;
+  max-width: 850px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.textintro {
+  padding-top: 100px;
+}
+
+.imghome {
+  max-height: 300px;
+  max-width: 500px;
+  min-height: 250px;
+  min-width: 300px;
+  padding-bottom: 25px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home input {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.projNBA {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+.projNBA h1 {
+  float: left;
+  font-weight: bold;
+  font-family: 'Courier New';
+}
+
+.projects {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.projects input {
+  height: 100%;
+  width: 100%;
+}
+
+.links {
+  height: 40px;
+  width: 100%;
+  display: inline-flex;
+  padding-left: 60%;
+}
+
+.link {
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.git {
+  height: 30px;
+  width: 57px;
+}
+
+#replit {
+  height: 15px;
+  width: 15px;
+}
+
+.nbaQuiz {
+  max-height: 550px;
+  max-width: 600px;
+  min-height: 200px;
+  min-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nbatxt h2 {
+  font-family: 'Courier New';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.projtoptxt {
+  height: 30px;
+  width: 100%;
+  font-weight: bold;
+  padding-bottom: 90px;
+  font-family: 'Courier New';
+  font-style: normal;
+  font-size: 38px;
+}
+
+.projtoptxt h1 {
+  font-family: 'Courier New';
+  font-weight: 10;
+  font-style: normal;
+  font-size: 38px;
+}
+
+.footer {
+  text-decoration: none;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+  height: 100px;
+  padding-top: 25px;
+  margin-bottom: 0px;
+}
+
+.footer i {
+  padding-right: 40px;
+  margin-bottom: 0px;
+}
+
+.footer p {
+  padding-right: 5px;
+}
+
+.linkdin {
+  display: inline-block;
+}
+
+.email {
+  display: inline-block;
+}
+
+.footer a {
+  text-decoration: none;
+  position: relative;
+  color: white;
+  font-size: 18px;
+  font-family: 'Courier New';
+  font-weight: 10;
+  font-style: normal;
+  padding-right: 8px;
+  padding: 10px;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1600px) {
+  .nav {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #eaeaeb;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    background-color: black;
+  }
+
+  .menu {
+    margin: 0 30px 0 0;
+  }
+
+  .menu a {
+    clear: right;
+    text-decoration: none;
+    color: whitesmoke;
+    margin: 0 10px;
+    line-height: 50px;
+  }
+
+  label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 100px;
+    display: none;
+    width: 26px;
+    float: right;
+  }
+
+  .imghome {
+    display: block;
+    padding: 15px;
+  }
+
+  .home {
+    padding-top: 25px;
+  }
+
+  .home h1 {
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    font-size: 38px;
+    padding-bottom: 25px;
+    padding-top: 15px;
+  }
+
+  .home h2 {
+    font-family: 'Courier New';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+
+  .text h1 {
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    font-size: 38px;
+    padding-bottom: 25px;
+    padding-top: 15px;
+  }
+
+  .projtoptxt h1 {
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-size: 38px;
+  }
+
+  .projNBA h1 {
+    float: left;
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-size: 24px;
+    padding-left: 15px;
+  }
+
+  .nbaQuiz {
+    display: block;
+    padding: 15px;
+  }
+
+  .footer {
+    text-decoration: none;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: right;
+    height: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Courier New';
+  }
+
+  .footer i {
+    padding-right: 30px;
+    padding-top: 5px;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    padding-right: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    min-width: 100%;
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
+    color: whitesmoke;
+  }
+  .menu {
+    width: 100%;
+    background-color: black;
+    display: none;
+    margin-bottom: 3px;
+  }
+
+  .home {
+    min-width: 100%;
+    padding-top: 25px;
+    margin: auto;
+  }
+
+  .home h1 {
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    font-size: 24px;
+    padding: 15px;
+    margin: auto;
+    display: block;
+  }
+
+  .home h2 {
+    font-family: 'Courier New';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .menu a {
+    padding-top: 1px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    height: 35px;
+  }
+
+  .imghome {
+    display: block;
+    padding: 15px;
+  }
+
+  .text h1 {
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .projects {
+    padding-top: 200px;
+    min-height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+
+  .projtoptxt h1 {
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .projNBA h1 {
+    float: left;
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-size: 18px;
+    padding-left: 15px;
+  }
+
+  .nbaQuiz {
+    display: block;
+    padding: 15px;
+  }
+
+  #toggle:checked + .menu {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  #toggle:checked + .nav {
+    margin-bottom: 50px;
+  }
+
+  .footer {
+    text-decoration: none;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    background-color: black;
+    color: white;
+    text-align: right;
+    height: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Courier New';
+  }
+  /*
+.footer {
+  text-decoration: none;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+  height: 100px;
+  padding-top:25px;
+}
+*/
+
+  .footer i {
+    padding-right: 30px;
+    padding-top: 5px;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    padding-right: 8px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    min-width: 100%;
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
+    color: whitesmoke;
+  }
+  .menu {
+    width: 100%;
+    background-color: black;
+    display: none;
+    margin-bottom: 3px;
+  }
+
+  .home {
+    min-width: 100%;
+    padding-top: 25px;
+    margin: auto;
+  }
+
+  .home h1 {
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    font-size: 24px;
+    padding: 15px;
+    margin: auto;
+    display: block;
+  }
+
+  .home h2 {
+    font-family: 'Courier New';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .menu a {
+    padding-top: 1px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    height: 35px;
+  }
+
+  .imghome {
+    display: block;
+    padding: 15px;
+  }
+
+  .text h1 {
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .projects {
+    padding-top: 200px;
+    min-height: 100%;
+    width: 100%;
+    margin: auto;
+  }
+
+  .projtoptxt h1 {
+    margin: auto;
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-size: 24px;
+    padding: 15px;
+  }
+
+  .projNBA h1 {
+    float: left;
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-size: 18px;
+    padding-left: 15px;
+  }
+
+  .nbaQuiz {
+    display: block;
+    padding: 15px;
+  }
+
+  #toggle:checked + .menu {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  #toggle:checked + .nav {
+    margin-bottom: 50px;
+  }
+
+  .footer {
+    text-decoration: none;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    background-color: black;
+    color: white;
+    text-align: right;
+    height: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Courier New';
+  }
+  /*
+.footer {
+  text-decoration: none;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  background-color: black;
+  color: white;
+  text-align: right;
+  height: 70px;
+  padding-top:25px;
+}
+*/
+
+  .footer i {
+    padding-right: 30px;
+    padding-top: 5px;
+  }
+
+  .footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    padding-right: 8px;
+  }
+}
