@@ -102,7 +102,7 @@ label {
 
 .imghome {
   width: 90%;
-  height: 40%;
+  height: auto;
   margin: 0 auto;
   text-align: center;
 }
@@ -127,8 +127,8 @@ label {
 }
 
 .quizimg {
-  width: 90%;
-  height: 60%;
+  max-width: 80%;
+  height: auto;
   padding-bottom: 25px;
   margin: 0 auto;
   text-align: center;
@@ -373,6 +373,7 @@ label {
   .quizimg {
     min-width: 400px;
     max-width: 60%;
+    height: auto;
     padding-bottom: 25px;
     margin: 0 auto;
     text-align: center;
@@ -576,7 +577,7 @@ label {
 
   .imghome {
     max-width: 60%;
-    height: 40%;
+    height: auto;
     margin: 0 auto;
     text-align: center;
   }
@@ -602,7 +603,7 @@ label {
 
   .quizimg {
     max-width: 60%;
-    height: 60%;
+    height: auto;
     padding-bottom: 25px;
     margin: 0 auto;
     text-align: center;
@@ -815,7 +816,7 @@ label {
 
   .imghome {
     max-width: 60%;
-    height: 40%;
+    height: auto;
     margin: 0 auto;
     text-align: center;
   }
@@ -841,7 +842,7 @@ label {
 
   .quizimg {
     width: 60%;
-    height: 60%;
+    height: auto;
     padding-bottom: 25px;
     margin: 0 auto;
     text-align: center;
