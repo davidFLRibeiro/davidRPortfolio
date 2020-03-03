@@ -1,21 +1,25 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
+  display: block;
+  padding: 0;
+  margin: 0;
   height: 100vh;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .nav {
+  padding: 0;
+  margin-left: 0;
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid #eaeaeb;
   text-align: right;
-  height: 70px;
-  line-height: 70px;
+  height: 60px;
+  line-height: 55px;
   font-family: 'Courier New';
   font-weight: 10;
   font-style: normal;
@@ -23,17 +27,46 @@ body {
 }
 
 .menu {
-  margin: 0 30px 0 0;
+  width: 100%;
+  background-color: black;
+  display: none;
+  margin-bottom: 3px;
 }
 
 .menu a {
-  clear: right;
+  padding-top: 1px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  height: 15px;
   text-decoration: none;
   color: whitesmoke;
-  margin: 0 10px;
-  line-height: 50px;
+  font-family: 'Courier New';
+  font-size: 14px;
 }
 
+.nav label {
+  margin-right: 5px;
+  text-align: right;
+  width: 25px;
+  cursor: pointer;
+  color: whitesmoke;
+}
+#toggle {
+  display: none;
+}
+
+#toggle:checked + .menu {
+  display: block;
+  margin-bottom: 50px;
+}
+
+#toggle:checked + .nav {
+  display: none;
+  margin-bottom: 50px;
+}
+
+/*
 label {
   margin: 0 40px 0 0;
   font-size: 26px;
@@ -42,33 +75,36 @@ label {
   width: 26px;
   float: right;
 }
-
-#toggle {
-  display: none;
-}
+*/
 
 .home {
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   text-align: center;
-  padding-top: 70px;
 }
 
 .home h1 {
   font-family: 'Courier New';
-  font-weight: 10;
+  font-weight: bold;
   font-style: normal;
-  font-size: 38px;
+  font-size: 16px;
   padding-bottom: 25px;
   padding-top: 15px;
   margin: auto;
 }
 .home h2 {
+  font-weight: 20;
   font-family: 'Courier New';
-  font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  padding-bottom: 20px;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
+.imghome {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .projects {
@@ -78,21 +114,21 @@ label {
 }
 
 .text {
-  padding-top: 35px;
-  max-width: 850px;
+  padding-top: 15px;
+  width: 90%;
   text-align: center;
   margin: 0 auto;
 }
 
 .textintro {
+  width: 90%;
+  margin: 0 auto;
   padding-top: 100px;
 }
 
-.imghome {
-  max-height: 300px;
-  max-width: 500px;
-  min-height: 250px;
-  min-width: 300px;
+.quizimg {
+  max-width: 70%;
+  height: auto;
   padding-bottom: 25px;
   margin: 0 auto;
   text-align: center;
@@ -105,14 +141,9 @@ label {
 }
 
 .projNBA {
-  max-width: 600px;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
-}
-.projNBA h1 {
-  float: left;
-  font-weight: bold;
-  font-family: 'Courier New';
 }
 
 .projects {
@@ -122,120 +153,365 @@ label {
   margin: 0 auto;
   text-decoration: none;
 }
-
-.projects input {
-  height: 100%;
-  width: 100%;
+.nbatxt h2 {
+  font-family: 'Courier New';
+  font-size: 14px;
+  font-weight: 20;
 }
 
 .links {
-  height: 40px;
-  width: 100%;
-  display: inline-flex;
-  padding-left: 60%;
+  text-align: left;
+  width: 90%;
+  display: inline-block;
+  margin-bottom: 25px;
 }
 
-.link {
-  margin-top: 15px;
+.link a {
+  color: black;
+  font-family: 'Courier New';
+  display: inline-block;
   text-decoration: none;
+  font-size: 12px;
+  font-weight: 20;
 }
 
 .git {
-  height: 30px;
-  width: 57px;
+  height: 20px;
+  width: 37px;
+  display: inline-block;
 }
 
-#replit {
-  height: 15px;
-  width: 15px;
+.git img {
+  height: 25px;
+  width: 25px;
 }
 
 .nbaQuiz {
-  max-height: 550px;
-  max-width: 600px;
-  min-height: 200px;
-  min-width: 250px;
+  height: 30%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .nbatxt h2 {
   font-family: 'Courier New';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
+  font-size: 14px;
   padding-bottom: 20px;
+  font-weight: 20;
 }
 
 .projtoptxt {
   height: 30px;
   width: 100%;
-  font-weight: bold;
   padding-bottom: 90px;
   font-family: 'Courier New';
   font-style: normal;
-  font-size: 38px;
+  font-size: 16px;
 }
 
 .projtoptxt h1 {
+  font-weight: bold;
   font-family: 'Courier New';
-  font-weight: 10;
   font-style: normal;
-  font-size: 38px;
+  font-size: 16px;
+}
+
+.projtoptxt h2 {
+  font-weight: 20;
+  font-family: 'Courier New';
+  font-style: normal;
+  font-size: 14px;
 }
 
 .footer {
-  text-decoration: none;
+  overflow-wrap: break-word;
+  display: block;
   position: relative;
-  left: 0;
-  bottom: 0;
-  min-width: 100%;
+  width: 100%;
   background-color: black;
   color: white;
   text-align: right;
-  height: 100px;
-  padding-top: 25px;
-  margin-bottom: 0px;
-}
-
-.footer i {
-  padding-right: 40px;
-  margin-bottom: 0px;
-}
-
-.footer p {
-  padding-right: 5px;
+  height: 65px;
+  word-break: break-all;
 }
 
 .linkdin {
   display: inline-block;
 }
 
-.email {
-  display: inline-block;
+.email a {
+  overflow-wrap: break-word;
 }
 
 .footer a {
+  display: inline-block;
   text-decoration: none;
-  position: relative;
-  color: white;
-  font-size: 18px;
+  font-size: 12px;
   font-family: 'Courier New';
-  font-weight: 10;
-  font-style: normal;
-  padding-right: 8px;
-  padding: 10px;
-  margin-bottom: 0px;
+  color: whitesmoke;
+  padding-right: 5px;
+  word-wrap: break-word;
+  font-weight: 20;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 480px) {
+  body,
+  html {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   .nav {
+    padding: 0;
+    margin-left: 0;
     position: fixed;
     width: 100%;
-    border-bottom: 1px solid #eaeaeb;
+    text-align: right;
+    height: 60px;
+    line-height: 55px;
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    background-color: black;
+  }
+
+  .menu {
+    width: 100%;
+    background-color: black;
+    display: none;
+    margin-bottom: 3px;
+  }
+
+  .menu a {
+    padding-top: 1px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    height: 35px;
+  }
+
+  .nav label {
+    margin-right: 5px;
+    text-align: right;
+    width: 25px;
+    cursor: pointer;
+    color: whitesmoke;
+  }
+  #toggle {
+    display: none;
+  }
+
+  #toggle:checked + .menu {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  #toggle:checked + .nav {
+    display: none;
+    margin-bottom: 50px;
+  }
+
+  /*
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+*/
+
+  .home {
+    height: 70%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .home h1 {
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    padding-bottom: 25px;
+    padding-top: 15px;
+    margin: auto;
+  }
+  .home h2 {
+    font-family: 'Courier New';
+    font-weight: 20;
+    font-style: normal;
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+
+  .imghome {
+    min-width: 400px;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .text {
+    padding-top: 15px;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .textintro {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  .quizimg {
+    max-width: 60%;
+    height: auto;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home input {
+    text-align: center;
+    height: 100%;
+    width: 70%;
+  }
+
+  .projects {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+  .nbatxt h2 {
+    font-family: 'Courier New';
+    font-size: 18px;
+    font-weight: 20;
+  }
+
+  .links {
+    text-align: left;
+    width: 70%;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  .link a {
+    font-size: 14px;
+    color: black;
+    font-family: 'Courier New';
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .git {
+    height: 30px;
+    width: 57px;
+    display: inline-block;
+  }
+
+  .git img {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* changing*/
+  .nbaQuiz {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .nbatxt h2 {
+    font-family: 'Courier New';
+    font-size: 18px;
+    padding-bottom: 20px;
+    font-weight: 20;
+  }
+
+  .projtoptxt {
+    margin: auto;
+    height: 30px;
+    width: 100%;
+    padding-bottom: 90px;
+    font-family: 'Courier New';
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  .projtoptxt h1 {
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  .projtoptxt h2 {
+    font-family: 'Courier New';
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 20;
+  }
+
+  .footer {
+    overflow-wrap: break-word;
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: right;
+    height: 65px;
+    word-break: break-all;
+  }
+
+  .linkdin {
+    display: inline-block;
+  }
+
+  .email a {
+    overflow-wrap: break-word;
+  }
+
+  .footer a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 20;
+    font-size: 16px;
+    font-family: 'Courier New';
+    color: whitesmoke;
+    padding-right: 5px;
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body,
+  html {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .nav {
+    padding: 0;
+    margin-left: 0;
+    position: fixed;
+    width: 100%;
     text-align: right;
     height: 70px;
-    line-height: 70px;
+    line-height: 55px;
     font-family: 'Courier New';
     font-weight: 10;
     font-style: normal;
@@ -243,396 +519,448 @@ label {
   }
 
   .menu {
-    margin: 0 30px 0 0;
+    display: inline-block;
   }
 
   .menu a {
-    clear: right;
+    font-size: 16px;
+    font-weight: 20;
+    font-family: 'Courier New';
+    margin-right: 5px;
     text-decoration: none;
     color: whitesmoke;
-    margin: 0 10px;
-    line-height: 50px;
+    display: inline;
   }
 
   label {
-    margin: 0 40px 0 0;
-    font-size: 26px;
-    line-height: 100px;
     display: none;
-    width: 26px;
-    float: right;
   }
 
-  .imghome {
-    display: block;
-    padding: 15px;
+  #toggle {
+    display: none;
   }
+
+  /*
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+*/
 
   .home {
-    padding-top: 25px;
+    height: 60%;
+    width: 100%;
+    text-align: center;
   }
 
   .home h1 {
     font-family: 'Courier New';
-    font-weight: 10;
+    font-weight: bold;
     font-style: normal;
-    font-size: 38px;
+    font-size: 22px;
     padding-bottom: 25px;
     padding-top: 15px;
+    margin: auto;
   }
-
   .home h2 {
     font-family: 'Courier New';
-    font-weight: 400;
     font-style: normal;
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: 20;
+  }
+
+  .imghome {
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .projects {
+    padding-top: 200px;
+    min-height: 100%;
+    width: 60%;
+  }
+
+  .text {
+    padding-top: 15px;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .textintro {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  .quizimg {
+    min-width: 450px;
+    max-width: 60%;
+    height: auto;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home input {
+    text-align: center;
+    height: 100%;
+    width: 60%;
+  }
+
+  .projects {
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+  .nbatxt h2 {
+    font-family: 'Courier New';
+    font-size: 20px;
+    font-weight: 20;
+  }
+
+  .links {
+    text-align: left;
+    width: 70%;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  .link a {
+    font-size: 14px;
+    font-weight: 20;
+    color: black;
+    font-family: 'Courier New';
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .git {
+    height: 30px;
+    width: 57px;
+    display: inline-block;
+  }
+
+  .git img {
+    height: 35px;
+    width: 35px;
+  }
+
+  /* changing*/
+  .nbaQuiz {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .nbatxt h2 {
+    font-family: 'Courier New';
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-weight: 20;
+  }
+
+  .projtoptxt {
+    height: 30px;
+    width: 60%;
+    padding-bottom: 90px;
+    font-family: 'Courier New';
+    font-style: normal;
+    font-size: 22px;
+  }
+
+  .projtoptxt h1 {
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-style: normal;
+    font-size: 20px;
+  }
+
+  .projtoptxt h2 {
+    font-family: 'Courier New';
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 20;
+  }
+
+  .footer {
+    overflow-wrap: break-word;
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: right;
+    height: 65px;
+    word-break: break-all;
+  }
+
+  .linkdin {
+    display: inline-block;
+  }
+
+  .email a {
+    overflow-wrap: break-word;
+  }
+
+  .footer a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Courier New';
+    color: whitesmoke;
+    padding-right: 5px;
+    word-wrap: break-word;
+    font-weight: 20;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body,
+  html {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .nav {
+    padding: 0;
+    margin-left: 0;
+    position: fixed;
+    width: 100%;
+    text-align: right;
+    height: 55px;
+    line-height: 55px;
+    font-family: 'Courier New';
+    font-weight: 10;
+    font-style: normal;
+    background-color: black;
+  }
+
+  .menu {
+    display: inline-block;
+  }
+
+  .menu a {
+    font-family: 'Courier New';
+    margin-right: 5px;
+    text-decoration: none;
+    color: whitesmoke;
+    display: inline;
+    font-size: 18px;
+    font-weight: 20;
+  }
+
+  label {
+    display: none;
+  }
+
+  #toggle {
+    display: none;
+  }
+
+  #toggle:checked + .menu {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  #toggle:checked + .nav {
+    display: none;
+    margin-bottom: 50px;
+  }
+
+  /*
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+*/
+
+  .home {
+    height: 60%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .home h1 {
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: 'Courier New';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 26px;
+    padding-bottom: 25px;
+    padding-top: 15px;
+    margin: auto;
+  }
+  .home h2 {
+    text-justify: inter-word;
+    font-weight: 20;
+    font-family: 'Courier New';
+    font-size: 24px;
+    padding-bottom: 10px;
+  }
+
+  .imghome {
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .projects {
+    padding-top: 200px;
+    min-height: 100%;
+    width: 60%;
+  }
+
+  .text {
+    padding-top: 15px;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .textintro {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  .quizimg {
+    width: 60%;
+    height: auto;
+    padding-bottom: 25px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .home input {
+    text-align: center;
+    height: 100%;
+    width: 60%;
+  }
+
+  .projects {
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+  .nbatxt h2 {
+    font-family: 'Courier New';
+    font-size: 24px;
+    font-weight: 20;
+  }
+
+  .links {
+    text-align: left;
+    width: 70%;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+
+  .link a {
+    font-size: 16px;
+    font-weight: 20;
+    color: black;
+    font-family: 'Courier New';
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .git {
+    height: 30px;
+    width: 57px;
+    display: inline-block;
+  }
+
+  .git img {
+    height: 35px;
+    width: 35px;
+  }
+
+  .nbaQuiz {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .nbatxt h2 {
+    font-family: 'Courier New';
     font-size: 24px;
     padding-bottom: 20px;
+    font-weight: 20;
   }
 
-  .text h1 {
+  .projtoptxt {
+    height: 30px;
+    width: 60%;
+    padding-bottom: 90px;
     font-family: 'Courier New';
-    font-weight: 10;
     font-style: normal;
-    font-size: 38px;
-    padding-bottom: 25px;
-    padding-top: 15px;
+    font-size: 24px;
   }
 
   .projtoptxt h1 {
-    margin: auto;
     font-weight: bold;
     font-family: 'Courier New';
-    font-size: 38px;
+    font-style: normal;
+    font-size: 26px;
   }
 
-  .projNBA h1 {
-    float: left;
-    font-weight: bold;
+  .projtoptxt h2 {
+    font-weight: 20;
     font-family: 'Courier New';
+    font-style: normal;
     font-size: 24px;
-    padding-left: 15px;
-  }
-
-  .nbaQuiz {
-    display: block;
-    padding: 15px;
   }
 
   .footer {
-    text-decoration: none;
+    overflow-wrap: break-word;
+    display: block;
     position: relative;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: black;
     color: white;
     text-align: right;
-    height: 100px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-family: 'Courier New';
+    height: 65px;
+    word-break: break-all;
   }
 
-  .footer i {
-    padding-right: 30px;
-    padding-top: 5px;
-  }
-
-  .footer a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-family: 'Courier New';
-    font-weight: 10;
-    font-style: normal;
-    padding-right: 8px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  body {
-    min-width: 100%;
-  }
-
-  label {
-    display: block;
-    cursor: pointer;
-    color: whitesmoke;
-  }
-  .menu {
-    width: 100%;
-    background-color: black;
-    display: none;
-    margin-bottom: 3px;
-  }
-
-  .home {
-    min-width: 100%;
-    padding-top: 25px;
-    margin: auto;
-  }
-
-  .home h1 {
-    font-family: 'Courier New';
-    font-weight: 10;
-    font-style: normal;
-    font-size: 24px;
-    padding: 15px;
-    margin: auto;
-    display: block;
-  }
-
-  .home h2 {
-    font-family: 'Courier New';
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    padding: 15px;
-  }
-
-  .menu a {
-    padding-top: 1px;
-    width: 100%;
+  .linkdin {
     display: inline-block;
-    text-align: center;
-    height: 35px;
   }
 
-  .imghome {
-    display: block;
-    padding: 15px;
-  }
-
-  .text h1 {
-    font-family: 'Courier New';
-    font-weight: 10;
-    font-style: normal;
-    font-size: 24px;
-    padding: 15px;
-  }
-
-  .projects {
-    padding-top: 200px;
-    min-height: 100%;
-    width: 100%;
-    margin: auto;
-  }
-
-  .projtoptxt h1 {
-    margin: auto;
-    font-weight: bold;
-    font-family: 'Courier New';
-    font-size: 24px;
-    padding: 15px;
-  }
-
-  .projNBA h1 {
-    float: left;
-    font-weight: bold;
-    font-family: 'Courier New';
-    font-size: 18px;
-    padding-left: 15px;
-  }
-
-  .nbaQuiz {
-    display: block;
-    padding: 15px;
-  }
-
-  #toggle:checked + .menu {
-    display: block;
-    margin-bottom: 50px;
-  }
-
-  #toggle:checked + .nav {
-    margin-bottom: 50px;
-  }
-
-  .footer {
-    text-decoration: none;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    min-width: 100%;
-    background-color: black;
-    color: white;
-    text-align: right;
-    height: 100px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-family: 'Courier New';
-  }
-  /*
-.footer {
-  text-decoration: none;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  min-width: 100%;
-  background-color: black;
-  color: white;
-  text-align: right;
-  height: 100px;
-  padding-top:25px;
-}
-*/
-
-  .footer i {
-    padding-right: 30px;
-    padding-top: 5px;
+  .email a {
+    overflow-wrap: break-word;
   }
 
   .footer a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-family: 'Courier New';
-    font-weight: 10;
-    font-style: normal;
-    padding-right: 8px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  body {
-    min-width: 100%;
-  }
-
-  label {
-    display: block;
-    cursor: pointer;
-    color: whitesmoke;
-  }
-  .menu {
-    width: 100%;
-    background-color: black;
-    display: none;
-    margin-bottom: 3px;
-  }
-
-  .home {
-    min-width: 100%;
-    padding-top: 25px;
-    margin: auto;
-  }
-
-  .home h1 {
-    font-family: 'Courier New';
-    font-weight: 10;
-    font-style: normal;
-    font-size: 24px;
-    padding: 15px;
-    margin: auto;
-    display: block;
-  }
-
-  .home h2 {
-    font-family: 'Courier New';
-    font-weight: 400;
-    font-style: normal;
-    font-size: 18px;
-    padding: 15px;
-  }
-
-  .menu a {
-    padding-top: 1px;
-    width: 100%;
     display: inline-block;
-    text-align: center;
-    height: 35px;
-  }
-
-  .imghome {
-    display: block;
-    padding: 15px;
-  }
-
-  .text h1 {
-    font-family: 'Courier New';
-    font-weight: 10;
-    font-style: normal;
-    font-size: 24px;
-    padding: 15px;
-  }
-
-  .projects {
-    padding-top: 200px;
-    min-height: 100%;
-    width: 100%;
-    margin: auto;
-  }
-
-  .projtoptxt h1 {
-    margin: auto;
-    font-weight: bold;
-    font-family: 'Courier New';
-    font-size: 24px;
-    padding: 15px;
-  }
-
-  .projNBA h1 {
-    float: left;
-    font-weight: bold;
-    font-family: 'Courier New';
-    font-size: 18px;
-    padding-left: 15px;
-  }
-
-  .nbaQuiz {
-    display: block;
-    padding: 15px;
-  }
-
-  #toggle:checked + .menu {
-    display: block;
-    margin-bottom: 50px;
-  }
-
-  #toggle:checked + .nav {
-    margin-bottom: 50px;
-  }
-
-  .footer {
     text-decoration: none;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    min-width: 100%;
-    background-color: black;
-    color: white;
-    text-align: right;
-    height: 100px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-family: 'Courier New';
-  }
-  /*
-.footer {
-  text-decoration: none;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  min-width: 100%;
-  background-color: black;
-  color: white;
-  text-align: right;
-  height: 70px;
-  padding-top:25px;
-}
-*/
-
-  .footer i {
-    padding-right: 30px;
-    padding-top: 5px;
-  }
-
-  .footer a {
-    text-decoration: none;
-    color: white;
     font-size: 18px;
     font-family: 'Courier New';
-    font-weight: 10;
-    font-style: normal;
-    padding-right: 8px;
+    color: whitesmoke;
+    padding-right: 5px;
+    word-wrap: break-word;
+    font-weight: 20;
   }
 }
